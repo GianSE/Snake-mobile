@@ -18,7 +18,7 @@
     }
 
     #menu {
-      margin: 50px auto;
+      margin: 20px auto;
       padding: 20px;
       background-color: #eee;
       border: 2px solid #333;
@@ -48,11 +48,13 @@
     .buttonContainer {
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
       margin-top: 20px;
     }
 
     .button {
-      margin: 0 10px;
+      margin: 5px;
       padding: 10px 20px;
       font-size: 18px;
       background-color: #4CAF50;
@@ -65,21 +67,28 @@
     .button:hover {
       background-color: #45a049;
     }
+
+    .directionButtons {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div id="menu">
     <h1>Welcome to Snake Game</h1>
     <button id="startButton">Start Game</button>
-    <div class="buttonContainer">
-      <button class="button" id="upButton">Up</button>
-      <button class="button" id="downButton">Down</button>
-      <button class="button" id="leftButton">Left</button>
-      <button class="button" id="rightButton">Right</button>
-    </div>
   </div>
 
   <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <div class="directionButtons">
+    <button class="button" id="upButton">Up</button>
+    <div>
+      <button class="button" id="leftButton">Left</button>
+      <button class="button" id="downButton">Down</button>
+      <button class="button" id="rightButton">Right</button>
+    </div>
+  </div>
 
   <script>
     const canvas = document.getElementById("gameCanvas");
